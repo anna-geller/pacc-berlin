@@ -131,6 +131,5 @@ dmypy.json
 .vscode/
 .tmp/
 *-deployment.yaml
-*/*.png
 */*.jpeg
 train/
