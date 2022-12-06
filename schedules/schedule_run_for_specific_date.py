@@ -1,11 +1,8 @@
-"""
-We may e.g. add CLI given ISO 8601 string: prefect deployment schedule flow/deployment '2022-09-23T20:00:00+02:00'
-"""
 import asyncio
 import datetime
 
 import pendulum
-from prefect.client import get_client
+from prefect import get_client
 from prefect.orion.schemas.states import Scheduled
 from prefect.orion.schemas.filters import FlowFilter, DeploymentFilter
 
@@ -31,4 +28,11 @@ if __name__ == "__main__":
             deployment_name="prod",
             dt=pendulum.datetime(2022, 9, 23, 20, 0, 0, 0, tz="Europe/Berlin"),
         )
+    )
+    # equivalent to:
+    from prefect.deployments import run_deployment
+
+    run_deployment(
+        name="parametrized/prod",
+        scheduled_time=pendulum.datetime(2022, 12, 23, 20, 0, 0, 0, tz="Europe/Berlin"),
     )
