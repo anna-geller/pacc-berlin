@@ -1,0 +1,15 @@
+awswrangler==2.18.0
+fastapi==0.88.0
+pandas==1.5.0
+pendulum==2.1.2
+Pillow==9.3.0
+prefect==2.7.0
+prefect_aws==0.1.8
+prefect_dask==0.2.1
+prefect_gitlab==0.1.0
+prefect_ray==0.2.1
+prefect_slack==0.1.0
+pydantic==1.10.2
+python-dotenv==0.21.0
+python_dateutil==2.8.2
+SQLAlchemy==1.4.44

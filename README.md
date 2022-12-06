@@ -1,2 +1,2 @@
-# pacc-berlin
-Workshop for LiveEO
+# Prefect Workshop Live with LiveEO
+
