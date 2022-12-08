@@ -1,5 +1,5 @@
 """
-prefect deployment build -a -n dev -q dev flows/06_parametrization/
+pdb -a -n dev -q dev flows/06_parametrization/
 """
 from prefect import flow, get_run_logger, task
 from pydantic import BaseModel, validator

@@ -1,10 +1,12 @@
 from prefect import flow, task
 from typing import List
+import time
 
 
-@task
+@task(name="sth")
 def hello_world(user: str):
     print(f"✨ Hello from the workshop, {user}! 👋 📚")
+    time.sleep(5)
 
 
 @flow(log_prints=True)
@@ -30,6 +32,7 @@ def hi(
 ):
     print("Hi from Prefect, LiveEO! 🤗")
     for user in users:
+        # hello_world(user)  # would run sequentially + would be slow
         hello_world.with_options(name=user).submit(user)
 
 
