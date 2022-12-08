@@ -3,7 +3,7 @@ from typing import List
 import time
 
 
-@task(name="sth")
+@task
 def hello_world(user: str):
     print(f"✨ Hello from the workshop, {user}! 👋 📚")
     time.sleep(5)
