@@ -4,7 +4,7 @@ import time
 
 
 @task
-def hello_world(user: str):
+def hello_world(user: str) -> None:
     print(f"✨ Hello from the workshop, {user}! 👋 📚")
     time.sleep(5)
 
@@ -29,7 +29,7 @@ def hi(
         "Wieger",
         "Tobias",
     ]
-):
+) -> None:
     print("Hi from Prefect, LiveEO! 🤗")
     for user in users:
         # hello_world(user)  # would run sequentially + would be slow

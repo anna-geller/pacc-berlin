@@ -19,3 +19,4 @@ def parametrized(
 
 if __name__ == "__main__":
     parametrized(user="World")
+from prefect.infrastructure.kubernetes import KubernetesJob
